@@ -1,0 +1,19 @@
+let init = 0;
+let init2 = 0;
+
+function hasBalancedParens(holder) {
+  for (let i = 0; i < holder.length; i++) {
+    if (holder[i] === "(") {
+      init += 1;
+    } else if (holder[i] === ")") {
+      init2 += 1;
+    }
+  }
+  return init === init2;
+}
+
+console.log(hasBalancedParens("(I work!)"));
+console.log(hasBalancedParens("(Ahhhh!)("));
+console.log(hasBalancedParens("((There's to many here!)"));
+console.log(hasBalancedParens("(This (one as well.) ) )"));
+console.log(hasBalancedParens("Parens dont exist...."));
